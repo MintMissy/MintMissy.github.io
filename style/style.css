@@ -1,18 +1,18 @@
 :root {
   --color-primary: #fb8500;
   --color-primary-light: #ffdc00;
-  --color-bg-1: #054255;
-  --color-bg-2: #023047;
-  --color-bg-3: #051e3b;
-  --color-bg-4: #051122;
-  --color-bg-5: #070716;
-}
-:root .dark {
   --color-bg-1: #ffffff;
   --color-bg-2: #e9ecef;
   --color-bg-3: #dee2e6;
   --color-bg-4: #ced4da;
   --color-bg-5: #adb5bd;
+}
+:root .dark {
+  --color-bg-1: #054255;
+  --color-bg-2: #023047;
+  --color-bg-3: #051e3b;
+  --color-bg-4: #051122;
+  --color-bg-5: #070716;
 }
 
 .bg-primary {
@@ -21,6 +21,27 @@
 
 .bg-primary-light {
   background-color: var(--color-primary-light);
+}
+
+.navbar {
+  list-style: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  padding-inline: 0.5rem;
+  gap: 1.5rem;
+  background-color: var(--color-primary-light);
+  border-radius: 4px;
+}
+.navbar__link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar__link.active, .navbar__link:hover, .navbar__link:focus, .navbar__link:focus-visible {
+  background-color: #000000;
+  color: var(--color-primary-light);
 }
 
 .socials {
@@ -44,7 +65,7 @@
   transform: scale(1.25);
 }
 .socials__icon a {
-  color: var(--color-bg-5);
+  color: #000000;
   background-color: unset;
 }
 

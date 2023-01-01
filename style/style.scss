@@ -2,55 +2,82 @@
   --color-primary: #fb8500;
   --color-primary-light: #ffdc00;
 
-  --color-bg-1: #054255;
-  --color-bg-2: #023047;
-  --color-bg-3: #051e3b;
-  --color-bg-4: #051122;
-  --color-bg-5: #070716;
+  --color-bg-1: #ffffff;
+  --color-bg-2: #e9ecef;
+  --color-bg-3: #dee2e6;
+  --color-bg-4: #ced4da;
+  --color-bg-5: #adb5bd;
 
-  .dark {	
-		--color-bg-1: #ffffff;
-		--color-bg-2: #e9ecef;
-		--color-bg-3: #dee2e6;
-		--color-bg-4: #ced4da;
-		--color-bg-5: #adb5bd;
+  .dark {
+    --color-bg-1: #054255;
+    --color-bg-2: #023047;
+    --color-bg-3: #051e3b;
+    --color-bg-4: #051122;
+    --color-bg-5: #070716;
   }
 }
 
-body{}
-
-.bg-primary{
-	background-color: var(--color-primary);
+body {
 }
 
-.bg-primary-light{
-	background-color: var(--color-primary-light);
+.bg-primary {
+  background-color: var(--color-primary);
 }
 
-.socials{
-	position: absolute;
-	top: 1.5rem;
-	left: 1.5rem;
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	padding: 1.5rem;
-	border-radius: 4px;
-	background: var(--color-primary-light);
-	gap: 1.5rem;
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
 
-	&__icon {
-		font-size: 1.4rem;
-		transition: transform 0.1s ease-in-out;
-		background-color: unset;
+.navbar {
+  list-style: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  padding-inline: 0.5rem;
+  gap: 1.5rem;
+  background-color: var(--color-primary-light);
+  border-radius: 4px;
 
-		&:hover{
-			transform: scale(1.25);
-		}
+  &__link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
 
-		a {
-			color: var(--color-bg-5);
-			background-color: unset;
-		}
-	}
+    &.active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      background-color: #000000;
+      color: var(--color-primary-light);
+    }
+  }
+}
+
+.socials {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: var(--color-primary-light);
+  gap: 1.5rem;
+
+  &__icon {
+    font-size: 1.4rem;
+    transition: transform 0.1s ease-in-out;
+    background-color: unset;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+
+    a {
+      color: #000000;
+      background-color: unset;
+    }
+  }
 }
