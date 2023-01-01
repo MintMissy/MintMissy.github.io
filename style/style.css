@@ -1,3 +1,51 @@
+:root {
+  --color-primary: #fb8500;
+  --color-primary-light: #ffdc00;
+  --color-bg-1: #054255;
+  --color-bg-2: #023047;
+  --color-bg-3: #051e3b;
+  --color-bg-4: #051122;
+  --color-bg-5: #070716;
+}
+:root .dark {
+  --color-bg-1: #ffffff;
+  --color-bg-2: #e9ecef;
+  --color-bg-3: #dee2e6;
+  --color-bg-4: #ced4da;
+  --color-bg-5: #adb5bd;
+}
 
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.socials {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 4px;
+  background: var(--color-primary-light);
+  gap: 1.5rem;
+}
+.socials__icon {
+  font-size: 1.4rem;
+  transition: transform 0.1s ease-in-out;
+  background-color: unset;
+}
+.socials__icon:hover {
+  transform: scale(1.25);
+}
+.socials__icon a {
+  color: var(--color-bg-5);
+  background-color: unset;
+}
 
 /*# sourceMappingURL=style.css.map */
