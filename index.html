@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-		<nav aria-label="Primary Navigation">
-			<ul class="navbar pl-0">
-				<li><a href="" class="navbar__link active btn">About</a></li>
-				<li><a href="" class="navbar__link btn">Projects</a></li>
-				<li><a href="" class="navbar__link btn">Work</a></li>
-				<li><a href="" class="navbar__link btn">Contact</a></li>
-			</ul>
-		</nav>
+    <nav aria-label="Primary Navigation">
+      <ul class="navbar pl-0">
+        <li><a href="" class="navbar__link active btn">About</a></li>
+        <li><a href="" class="navbar__link btn">Projects</a></li>
+        <li><a href="" class="navbar__link btn">Work</a></li>
+        <li><a href="" class="navbar__link btn">Contact</a></li>
+      </ul>
+    </nav>
     <nav aria-label="My Socials">
       <ul class="socials">
         <li class="socials__icon">
@@ -45,17 +45,53 @@
       </ul>
     </nav>
     <main>
-      <section class="container p-4">
-				<div class="row">
-					<header class="col-md-8">
-						<h1 class="fw-bold">Hi! I'm Dawid 'MintMissy'</h1>
-						<p class="fs-4">A creative frontend and minecraft developer that helps people in implementing their innovational ideas.</p>
-						<img src="image/mintmissy-logo.jpg" alt="" aria-hidden="true" class="rounded-circle w-25">
-					</header>
-				</div>
+      <section class="home-hero">
+        <header class="row container mx-auto">
+          <div class="col-8">
+            <h1 class="fw-bold display-1">Hi! I'm Dawid</h1>
+            <p class="fs-4">
+              A creative frontend and minecraft developer that helps people in implementing their innovational ideas.
+            </p>
+            <button class="btn btn-dark fs-5">CONTACT</button>
+          </div>
+          <div class="col-4">
+            <img src="image/mintmissy-logo.jpg" alt="" aria-hidden="true" class="rounded-circle w-75" />
+          </div>
+          <div class="scroll-container">
+            <div class="scroll-indicator scroll-indicator--hero"></div>
+            <i class="arrow bi bi-caret-down-fill"></i>
+          </div>
+        </header>
+      </section>
+      <section class="container hobbies">
+        <h2 class="display-2 fw-bold">About Me</h2>
+        <p class="fs-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat corporis obcaecati ipsam animi. Vitae provident voluptatum voluptatibus cum veritatis, cumque autem, ullam voluptates minima ut totam officiis, at iure officia?</p>
+
+        <div class="hobbies__list row">
+          <figure class="hobbies__list__item col-4">
+            <img src="" alt="">
+            <figcaption>
+              <h3>Programming</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis facilis unde deleniti reiciendis, ipsam omnis?</p>
+            </figcaption>
+          </figure>
+          <figure class="hobbies__list__item col-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Rollerblade-coyote.JPG/1200px-Rollerblade-coyote.JPG" alt="">
+            <figcaption>
+              <h3 class="fw-bold h2">Inline Skating</h3>
+              <p class="fs-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis facilis unde deleniti reiciendis, ipsam omnis?</p>
+            </figcaption>
+          </figure>
+          <figure class="hobbies__list__item col-4">
+            <img src="" alt="">
+            <figcaption>
+              <h3>Digital Art</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis facilis unde deleniti reiciendis, ipsam omnis?</p>
+            </figcaption>
+          </figure>
+        </div>
       </section>
     </main>
-    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
