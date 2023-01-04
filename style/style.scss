@@ -3,7 +3,7 @@
   --color-primary-light: #ffdc00;
 
   --color-bg-1: #054255;
-  --color-bg-2: #023047;
+  --color-bg-2: #1b1e25;
   --color-bg-3: #051e3b;
   --color-bg-4: #051122;
   --color-bg-5: #0d0d16;
@@ -152,29 +152,43 @@ body {
 
 .hobbies {
   &__list {
-    display: flex;
-
     &__item {
       overflow: hidden;
+      height: 250px;
       border-radius: 4px;
       position: relative;
+
+      @media screen and (min-width: 768px) {
+        height: 300px;
+      }
 
       img {
         border-radius: 4px;
         width: 100%;
-        object-fit: cover;
         height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s;
       }
 
-      &:hover figcaption {
-        opacity: 1;
+      &:hover {
+        img {
+          transform: scale(1.5) rotate(22deg);
+        }
+
+        figcaption {
+          opacity: 0.9;
+        }
       }
 
       figcaption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         transition: opacity 0.35s;
+        height: 100%;
         opacity: 0;
         background-color: var(--color-bg-2);
-        color: #000000;
         text-align: center;
         padding: 2rem;
         position: absolute;

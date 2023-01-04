@@ -2,7 +2,7 @@
   --color-primary: #fb8500;
   --color-primary-light: #ffdc00;
   --color-bg-1: #054255;
-  --color-bg-2: #023047;
+  --color-bg-2: #1b1e25;
   --color-bg-3: #051e3b;
   --color-bg-4: #051122;
   --color-bg-5: #0d0d16;
@@ -134,28 +134,39 @@ body {
   background-color: var(--color-primary-light);
 }
 
-.hobbies__list {
-  display: flex;
-}
 .hobbies__list__item {
   overflow: hidden;
+  height: 250px;
   border-radius: 4px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hobbies__list__item {
+    height: 300px;
+  }
 }
 .hobbies__list__item img {
   border-radius: 4px;
   width: 100%;
-  object-fit: cover;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+}
+.hobbies__list__item:hover img {
+  transform: scale(1.5) rotate(22deg);
 }
 .hobbies__list__item:hover figcaption {
-  opacity: 1;
+  opacity: 0.9;
 }
 .hobbies__list__item figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   transition: opacity 0.35s;
+  height: 100%;
   opacity: 0;
   background-color: var(--color-bg-2);
-  color: #000000;
   text-align: center;
   padding: 2rem;
   position: absolute;
