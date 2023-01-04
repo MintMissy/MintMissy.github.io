@@ -3,7 +3,7 @@
   --color-primary-light: #ffdc00;
 
   --color-bg-1: #054255;
-  --color-bg-2: #1b1e25;
+  --color-bg-2: #141820;
   --color-bg-3: #051e3b;
   --color-bg-4: #051122;
   --color-bg-5: #0d0d16;
@@ -156,7 +156,6 @@ body {
     &__item {
       overflow: hidden;
       height: 250px;
-      border-radius: 4px;
       position: relative;
 
       @media screen and (min-width: 768px) {
@@ -179,6 +178,16 @@ body {
         figcaption {
           opacity: 0.9;
         }
+
+        ::before {
+          content: "";
+          position: absolute;
+          inset: 98% 0 0 0;
+          width: 100;
+          height: 0.5rem;
+          border-radius: 4px;
+          background-color: var(--color-primary-light);
+        }
       }
 
       figcaption {
@@ -193,11 +202,13 @@ body {
         text-align: center;
         padding: 2rem;
         position: absolute;
-        top: 50%;
         transform: translateY(-50%);
-        left: 0;
-        right: 0;
+        inset: 50% 0 0 0;
         z-index: 1;
+
+        h3 {
+          color: var(--color-primary-light);
+        }
       }
     }
   }
@@ -205,22 +216,23 @@ body {
 
 .skills {
   &__list {
-
     &__item {
       text-align: center;
-      
+
       h3 {
         margin-top: 0.5rem;
       }
 
-      &:hover h3{
-        color: var(--color-text-1)
+      &:hover h3 {
+        color: var(--color-text-1);
       }
 
-      &:hover &__icon{
+      &:hover &__icon {
         transform: scale(1.5);
+        border-radius: 1.5rem;
       }
-      &:hover &__icon::before{
+      
+      &:hover &__icon::before {
         inset: -3rem;
       }
 
@@ -229,20 +241,20 @@ body {
         position: relative;
         width: fit-content;
         margin-inline: auto;
-        padding: .75rem;
+        padding: 0.75rem;
         background-color: rgba(35, 46, 51, 0.274);
         border-radius: 100%;
-        transition: transform .2s;
+        transition: transform 0.2s;
 
-        &::before{
+        &::before {
           z-index: -1;
           position: absolute;
-          content: '';
-          inset: -.25rem;
+          content: "";
+          inset: -0.25rem;
           background-color: rgba(35, 46, 51, 0.274);
           border-radius: 100%;
           inset: 0;
-          transition: inset .2s;
+          transition: inset 0.2s;
         }
 
         img {
@@ -253,7 +265,7 @@ body {
         }
       }
 
-      h3{
+      h3 {
         color: var(--color-text-3);
       }
     }
