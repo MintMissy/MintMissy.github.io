@@ -3,10 +3,10 @@
   --color-primary-light: #ffdc00;
 
   --color-bg-1: #054255;
-  --color-bg-2: #141820;
+  --color-bg-2: #080a0e;
   --color-bg-3: #051e3b;
   --color-bg-4: #051122;
-  --color-bg-5: #0d0d16;
+  --color-bg-5: #0c0c14;
 
   --color-text-1: #ffffff;
   --color-text-2: #f1f1f1;
@@ -102,10 +102,22 @@ body {
 
 .home-hero {
   // background: var(--color-bg-2);
-  margin-top: 9.5rem;
-  padding-block: 4rem;
+  position: relative;
   padding-left: 12rem;
-  min-height: 70vh;
+  padding-top: 15rem;
+  padding-bottom: 8rem;
+  min-height: 100vh;
+
+  video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.1;
+  }
 
   p {
     max-width: 70%;
@@ -172,6 +184,7 @@ body {
 }
 
 .hobbies {
+  padding-top: 5rem;
   &__list {
     &__item {
       overflow: hidden;
@@ -235,6 +248,8 @@ body {
 }
 
 .skills {
+  padding-top: 5rem;
+
   &__list {
     &__item {
       text-align: center;
