@@ -26,6 +26,26 @@ body {
   background-color: var(--color-primary-light);
 }
 
+.trail-particle {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 3px;
+  pointer-events: none;
+  background: var(--color-primary-light);
+  animation: spin 0.5s infinite;
+  z-index: 100;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.75);
+  }
+}
+
 .navbar {
   list-style: none;
   position: absolute;
