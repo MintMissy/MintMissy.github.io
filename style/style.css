@@ -53,6 +53,7 @@ body {
   gap: 1.5rem;
   background-color: var(--color-primary-light);
   border-radius: 4px;
+  z-index: 100;
 }
 .navbar__link {
   color: #000000;
@@ -71,18 +72,25 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.5rem 0.9rem;
   border-radius: 4px;
   background: var(--color-primary-light);
   gap: 1.5rem;
+  z-index: 100;
 }
 .socials__icon {
+  padding-inline: 0.35rem;
   font-size: 1.4rem;
   transition: transform 0.1s ease-in-out;
   background-color: unset;
+  border-radius: 4px;
 }
 .socials__icon:hover {
+  background-color: #000000;
   transform: scale(1.25);
+}
+.socials__icon:hover a {
+  color: var(--color-primary-light);
 }
 .socials__icon a {
   color: #000000;

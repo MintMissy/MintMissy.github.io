@@ -30,10 +30,14 @@ function Particle() {
 
 function drawParticles() {
   let x = mousePosition.x;
-  let y = mousePosition.y;
+  let y = mousePosition.y + 15;
 
   trailParticles.forEach((particle, index, particles) => {
     const nextParticle = particles[index + 1] || particles[0];
+
+    if(x == mousePosition.x && y == mousePosition.y) {
+      return;
+    }
 
     particle.setPosition(x, y);
     particle.draw();
