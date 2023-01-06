@@ -14,6 +14,8 @@
 body {
   background-color: var(--color-bg-5);
   color: var(--color-text-1);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .bg-primary {
@@ -141,17 +143,6 @@ body {
   animation: moveUpDown 1s ease-in-out infinite;
 }
 
-@keyframes moveUpDown {
-  0% {
-    transform: translateY(0.5rem);
-  }
-  50% {
-    transform: translate(0rem);
-  }
-  100% {
-    transform: translateY(0.5rem);
-  }
-}
 .scroll-indicator {
   position: relative;
   width: 2rem;
@@ -173,6 +164,17 @@ body {
   background-color: var(--color-primary-light);
 }
 
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0.5rem);
+  }
+  50% {
+    transform: translate(0rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
 .hobbies {
   padding-top: 5rem;
 }
