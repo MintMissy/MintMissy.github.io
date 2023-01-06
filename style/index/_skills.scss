@@ -1,6 +1,23 @@
 .skills {
   padding-top: 5rem;
 
+  &__container {
+    border-left: solid white 0.5rem;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-weight: 700;
+      text-align: center;
+      position: relative;
+      margin-bottom: 1.5rem;
+      z-index: 10;
+    }
+  }
+
   &__list {
     &__item {
       text-align: center;
@@ -17,7 +34,7 @@
         transform: scale(1.5);
         border-radius: 1.5rem;
       }
-      
+
       &:hover &__icon::before {
         inset: -3rem;
       }
