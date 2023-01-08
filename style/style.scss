@@ -18,6 +18,7 @@ body {
   color: var(--color-text-1);
   max-width: 100vw;
   overflow-x: hidden;
+  padding-bottom: 2rem;
 }
 
 .bg-primary {
@@ -109,6 +110,8 @@ body {
     }
   }
 }
+
+@import "components";
 
 @import "index/home-hero";
 @import "index/hobbies";

@@ -16,6 +16,7 @@ body {
   color: var(--color-text-1);
   max-width: 100vw;
   overflow-x: hidden;
+  padding-bottom: 2rem;
 }
 
 .bg-primary {
@@ -99,6 +100,72 @@ body {
   background-color: unset;
 }
 
+.cards-group__card {
+  overflow: hidden;
+  height: 250px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .cards-group__card {
+    height: 300px;
+  }
+}
+.cards-group__card::before {
+  content: "";
+  position: absolute;
+  display: none;
+  inset: 98% 0 0 0;
+  width: 100;
+  height: 0.5rem;
+  background-color: var(--color-primary-light);
+  z-index: 100;
+}
+.cards-group__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+}
+.cards-group__card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.35s;
+  height: 100%;
+  opacity: 0;
+  background-color: var(--color-bg-2);
+  text-align: center;
+  padding: 2rem;
+  position: absolute;
+  transform: translateY(-50%);
+  inset: 50% 0 0 0;
+  z-index: 1;
+}
+.cards-group__card figcaption h3 {
+  color: var(--color-primary-light);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.cards-group__card figcaption p {
+  font-size: 1.25rem;
+}
+.cards-group__card figcaption a:hover:hover {
+  color: var(--color-text-1);
+}
+.cards-group__card figcaption .bi {
+  font-size: 2.5rem;
+}
+.cards-group__card:hover img {
+  transform: scale(1.5) rotate(22deg);
+}
+.cards-group__card:hover figcaption {
+  opacity: 0.9;
+}
+.cards-group__card:hover::before {
+  display: block;
+}
+
 .home-hero {
   position: relative;
   padding-left: 12rem;
@@ -177,57 +244,6 @@ body {
 }
 .hobbies {
   padding-top: 5rem;
-}
-.hobbies__list__item {
-  overflow: hidden;
-  height: 250px;
-  position: relative;
-}
-@media screen and (min-width: 768px) {
-  .hobbies__list__item {
-    height: 300px;
-  }
-}
-.hobbies__list__item img {
-  border-radius: 4px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s;
-}
-.hobbies__list__item:hover img {
-  transform: scale(1.5) rotate(22deg);
-}
-.hobbies__list__item:hover figcaption {
-  opacity: 0.9;
-}
-.hobbies__list__item:hover ::before {
-  content: "";
-  position: absolute;
-  inset: 98% 0 0 0;
-  width: 100;
-  height: 0.5rem;
-  border-radius: 4px;
-  background-color: var(--color-primary-light);
-}
-.hobbies__list__item figcaption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: opacity 0.35s;
-  height: 100%;
-  opacity: 0;
-  background-color: var(--color-bg-2);
-  text-align: center;
-  padding: 2rem;
-  position: absolute;
-  transform: translateY(-50%);
-  inset: 50% 0 0 0;
-  z-index: 1;
-}
-.hobbies__list__item figcaption h3 {
-  color: var(--color-primary-light);
 }
 
 .skills {

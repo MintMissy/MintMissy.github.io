@@ -1,0 +1,81 @@
+.cards-group {
+  &__card {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      height: 300px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: none;
+      inset: 98% 0 0 0;
+      width: 100;
+      height: 0.5rem;
+      background-color: var(--color-primary-light);
+			z-index: 100;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s;
+    }
+
+    figcaption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.35s;
+      height: 100%;
+      opacity: 0;
+      background-color: var(--color-bg-2);
+      text-align: center;
+      padding: 2rem;
+      position: absolute;
+      transform: translateY(-50%);
+      inset: 50% 0 0 0;
+      z-index: 1;
+
+      h3 {
+        color: var(--color-primary-light);
+				font-size: 2rem;
+				font-weight: 700;
+      }
+
+			p{
+				font-size: 1.25rem;
+			}
+
+			a:hover{
+
+				&:hover{
+					color: var(--color-text-1);
+				}
+			}
+
+      .bi {
+        font-size: 2.5rem;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.5) rotate(22deg);
+      }
+
+      figcaption {
+        opacity: 0.9;
+      }
+
+      &::before {
+        display: block;
+      }
+    }
+  }
+}
