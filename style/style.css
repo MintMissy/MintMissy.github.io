@@ -48,7 +48,7 @@ body {
 }
 .navbar {
   list-style: none;
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   right: 1.5rem;
   display: flex;
@@ -57,6 +57,7 @@ body {
   background-color: var(--color-primary-light);
   border-radius: 4px;
   z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .navbar__link {
   color: #000000;
@@ -69,7 +70,7 @@ body {
 }
 
 .socials {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   left: 1.5rem;
   list-style: none;
@@ -164,6 +165,33 @@ body {
 }
 .cards-group__card:hover::before {
   display: block;
+}
+
+.icon-ripple {
+  display: block;
+  position: relative;
+  width: fit-content;
+  transition: border-radius 0.2s;
+  border-radius: 100%;
+  transition: transform 0.2s;
+}
+.icon-ripple::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  inset: -0.25rem;
+  background-color: rgba(35, 46, 51, 0.274);
+  border-radius: 100%;
+  inset: 0;
+  transition: inset 0.2s;
+  inset: 0rem;
+}
+.icon-ripple:hover {
+  transform: scale(1.25);
+  border-radius: 1.5rem;
+}
+.icon-ripple:hover::before {
+  inset: -3rem;
 }
 
 .home-hero {
@@ -269,6 +297,18 @@ body {
 }
 .skills__list__item h3 {
   margin-top: 0.5rem;
+  color: var(--color-text-3);
+}
+.skills__list__item__icon {
+  margin-inline: auto;
+  padding: 0.75rem;
+  background-color: rgba(35, 46, 51, 0.274);
+}
+.skills__list__item__icon img {
+  width: 100%;
+  display: block;
+  width: 48px;
+  height: 48px;
 }
 .skills__list__item:hover h3 {
   color: var(--color-text-1);
@@ -280,34 +320,23 @@ body {
 .skills__list__item:hover .skills__list__item__icon::before {
   inset: -3rem;
 }
-.skills__list__item__icon {
-  display: block;
-  position: relative;
-  width: fit-content;
-  margin-inline: auto;
-  padding: 0.75rem;
-  background-color: rgba(35, 46, 51, 0.274);
-  border-radius: 100%;
-  transition: transform 0.2s;
+
+.contact-icons__icon {
+  border-radius: 5rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
+  color: var(--color-primary-light);
 }
-.skills__list__item__icon::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  inset: -0.25rem;
-  background-color: rgba(35, 46, 51, 0.274);
-  border-radius: 100%;
-  inset: 0;
-  transition: inset 0.2s;
-}
-.skills__list__item__icon img {
-  width: 100%;
-  display: block;
-  width: 48px;
-  height: 48px;
-}
-.skills__list__item h3 {
-  color: var(--color-text-3);
+.contact-icons__icon:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-bg-5);
 }
 
 /*# sourceMappingURL=style.css.map */

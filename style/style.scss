@@ -29,90 +29,9 @@ body {
   background-color: var(--color-primary-light);
 }
 
-.trail-particle {
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  border-radius: 3px;
-  pointer-events: none;
-  background: var(--color-primary-light);
-  animation: spin 0.5s infinite;
-  z-index: 100;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(360deg) scale(0.75);
-  }
-}
-
-.navbar {
-  list-style: none;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  display: flex;
-  padding-inline: 0.5rem;
-  gap: 1.5rem;
-  background-color: var(--color-primary-light);
-  border-radius: 4px;
-  z-index: 100;
-
-  &__link {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
-
-    &.active,
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      background-color: #000000;
-      color: var(--color-primary-light);
-    }
-  }
-}
-
-.socials {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem 0.9rem;
-  border-radius: 4px;
-  background: var(--color-primary-light);
-  gap: 1.5rem;
-  z-index: 100;
-
-  &__icon {
-    padding-inline: .35rem;
-    font-size: 1.4rem;
-    transition: transform 0.1s ease-in-out;
-    background-color: unset;
-    border-radius: 4px;
-
-    &:hover {
-      background-color: #000000;
-      transform: scale(1.25);
-      a{
-        color: var(--color-primary-light);
-      }
-    }
-
-    a {
-      color: #000000;
-      background-color: unset;
-    }
-  }
-}
-
 @import "components";
 
 @import "index/home-hero";
 @import "index/hobbies";
-@import "index/skills"
+@import "index/skills";
+@import "index/contact";
