@@ -27,6 +27,10 @@ body {
   background-color: var(--color-primary-light);
 }
 
+p {
+  max-width: 75ch;
+}
+
 .trail-particle {
   position: absolute;
   height: 12px;
@@ -176,7 +180,7 @@ body {
   transition: transform 0.2s;
 }
 .icon-ripple::before {
-  z-index: -1;
+  z-index: -10;
   position: absolute;
   content: "";
   inset: -0.25rem;
@@ -337,10 +341,11 @@ body {
   align-items: center;
   font-size: 3rem;
   transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
-  color: var(--color-primary-light);
+  color: var(--color-text-3);
 }
 .contact-icons__icon:hover {
   background-color: var(--color-primary-light);
+  border-radius: 2rem;
   color: var(--color-bg-5);
   transform: scale(1.2);
 }

@@ -14,10 +14,11 @@
     align-items: center;
     font-size: 3rem;
     transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
-    color: var(--color-primary-light);
+    color: var(--color-text-3);
 
     &:hover {
       background-color: var(--color-primary-light);
+      border-radius: 2rem;
       color: var(--color-bg-5);
       transform: scale(1.2);
     }

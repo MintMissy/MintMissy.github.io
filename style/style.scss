@@ -29,6 +29,10 @@ body {
   background-color: var(--color-primary-light);
 }
 
+p{
+  max-width: 75ch;
+}
+
 @import "components";
 
 @import "index/home-hero";
