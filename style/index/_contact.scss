@@ -1,20 +1,25 @@
 .contact-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+
   &__icon {
     border-radius: 5rem;
-    background-color: rgba(255, 255, 255, 0.02);
-    padding: .5rem;
+    max-width: 6rem;
     width: 6rem;
     height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform .2s;
+    transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
     color: var(--color-primary-light);
 
     &:hover {
       background-color: var(--color-primary-light);
       color: var(--color-bg-5);
+      transform: scale(1.2);
     }
   }
 }

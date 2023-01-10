@@ -321,10 +321,15 @@ body {
   inset: -3rem;
 }
 
+.contact-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
 .contact-icons__icon {
   border-radius: 5rem;
-  background-color: rgba(255, 255, 255, 0.02);
-  padding: 0.5rem;
+  max-width: 6rem;
   width: 6rem;
   height: 6rem;
   display: flex;
@@ -337,6 +342,7 @@ body {
 .contact-icons__icon:hover {
   background-color: var(--color-primary-light);
   color: var(--color-bg-5);
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */
