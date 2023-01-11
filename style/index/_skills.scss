@@ -2,7 +2,7 @@
   padding-top: 5rem;
 
   &__container {
-    border-left: solid white 0.5rem;
+    border-left: solid #ffffff 0.5rem;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.01);
     padding: 1rem 1rem;
@@ -10,9 +10,9 @@
     margin-bottom: 2rem;
 
     h3 {
+      position: relative;
       font-weight: 700;
       text-align: center;
-      position: relative;
       margin-bottom: 1.5rem;
       z-index: 10;
     }
@@ -33,7 +33,6 @@
         background-color: rgba(35, 46, 51, 0.274);
 
         img {
-          width: 100%;
           display: block;
           width: 48px;
           height: 48px;

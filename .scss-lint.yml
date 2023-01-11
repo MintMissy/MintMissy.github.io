@@ -1,0 +1,36 @@
+scss_files: 'app/assets/stylesheets/**/*.css.scss'
+
+exclude: 'node_modules/**'
+
+linters:
+  BorderZero:
+    enabled: false
+
+  Indentation:
+    exclude:
+      - 'path/to/file.scss'
+      - 'path/to/directory/**'
+    severity: warning
+    width: 2
+
+  ColorVariable:
+    enabled: false
+
+  LeadingZero:
+    enabled: true
+    style: include_zero # or 'include_zero'
+
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+  
+  PropertySpelling:
+    enabled: false
+    extra_properties: []
+    disabled_properties: []
+  
+  HexLength:
+    enabled: true
+    style: long # or 'long'
