@@ -7,11 +7,11 @@ linters:
     enabled: false
 
   Indentation:
-    exclude:
-      - 'path/to/file.scss'
-      - 'path/to/directory/**'
+    enabled: true
     severity: warning
-    width: 2
+    allow_non_nested_indentation: false
+    character: 'tab' # or 'space'
+    width: 1
 
   ColorVariable:
     enabled: false

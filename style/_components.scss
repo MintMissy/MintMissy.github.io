@@ -1,195 +1,183 @@
-.trail-particle {
-  position: absolute;
-  height: 12px;
-  width: 12px;
-  border-radius: 3px;
-  pointer-events: none;
-  background: var(--color-primary-light);
-  animation: spin 0.5s infinite;
-  z-index: 100;
+@keyframes spin {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+
+	100% {
+		transform: rotate(360deg) scale(0.75);
+	}
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(360deg) scale(0.75);
-  }
+.trail-particle {
+	z-index: 100;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 3px;
+	background: var(--color-primary-light);
+	animation: spin 0.5s infinite;
+	pointer-events: none;
 }
 
 .navbar {
-  display: flex;
-  position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  list-style: none;
-  padding-inline: 0.5rem;
-  gap: 1.5rem;
-  background-color: var(--color-primary-light);
-  border-radius: 4px;
-  z-index: 100;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	display: flex;
+	z-index: 100;
+	position: fixed;
+	top: 1.5rem;
+	right: 1.5rem;
+	border-radius: 4px;
+	background-color: var(--color-primary-light);
+	box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30, rgba(0, 0, 0, 0.12) 0 4px 6px,
+		rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+	list-style: none;
+	padding-inline: 0.5rem;
+	gap: 1.5rem;
 
-  &__link {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
+	&__link {
+		color: #000000;
+		font-weight: 600;
+		text-decoration: none;
 
-    &.active,
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      background-color: #000000;
-      color: var(--color-primary-light);
-    }
-  }
+		&.active,
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			background-color: #000000;
+			color: var(--color-primary-light);
+		}
+	}
 }
 
 .socials {
-  display: flex;
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  list-style: none;
-  flex-direction: column;
-  padding: 1.5rem 0.9rem;
-  border-radius: 4px;
-  background: var(--color-primary-light);
-  gap: 1.5rem;
-  z-index: 100;
+	display: none;
+	z-index: 100;
+	position: fixed;
+	top: 1.5rem;
+	left: 1.5rem;
+	flex-direction: column;
+	padding: 1.5rem 0.9rem;
+	border-radius: 4px;
+	background: var(--color-primary-light);
+	color: #000000;
+	list-style: none;
+	gap: 1.5rem;
 
-  &__icon {
-    padding-inline: 0.35rem;
-    font-size: 1.4rem;
-    transition: transform 0.1s ease-in-out;
-    background-color: unset;
-    border-radius: 4px;
+	@media screen and (min-width: 769px) {
+		display: flex;
+	}
 
-    &:hover {
-      background-color: #000000;
-      transform: scale(1.25);
+	&__icon {
+		border-radius: 4px;
+		font-size: 1.4rem;
+		transition: transform 0.1s ease-in-out;
+		padding-inline: 0.35rem;
 
-      a {
-        color: var(--color-primary-light);
-      }
-    }
+		&:hover {
+			transform: scale(1.25);
+			background-color: #000000;
+			color: var(--color-primary-light);
+		}
 
-    a {
-      color: #000000;
-      background-color: unset;
-    }
-  }
+		a {
+			color: inherit;
+		}
+	}
 }
 
 .cards-group {
-  &__card {
-    position: relative;
-    overflow: hidden;
-    height: 250px;
+	&__card {
+		position: relative;
+		height: 300px;
+		overflow: hidden;
 
-    @media screen and (min-width: 768px) {
-      height: 300px;
-    }
+		&::before {
+			display: none;
+			z-index: 100;
+			position: absolute;
+			background-color: var(--color-primary-light);
+			content: '';
+			inset: 98% 0 0 0;
+		}
 
-    &::before {
-      display: none;
-      position: absolute;
-      content: "";
-      inset: 98% 0 0 0;
-      width: 100;
-      height: 0.5rem;
-      background-color: var(--color-primary-light);
-      z-index: 100;
-    }
+		&:hover::before {
+			display: block;
+		}
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.35s;
-    }
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.35s;
+		}
 
-    figcaption {
-      display: flex;
-      position: absolute;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transition: opacity 0.35s;
-      height: 100%;
-      opacity: 0;
-      background-color: var(--color-bg-2);
-      text-align: center;
-      padding: 2rem;
-      transform: translateY(-50%);
-      inset: 50% 0 0 0;
-      z-index: 1;
+		&:hover img {
+			transform: scale(1.5) rotate(22deg);
+		}
 
-      h3 {
-        color: var(--color-primary-light);
-        font-size: 2rem;
-        font-weight: 700;
-      }
+		figcaption {
+			display: flex;
+			z-index: 1;
+			position: absolute;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			padding: 2rem;
+			transform: translateY(-50%);
+			background-color: var(--color-bg-2);
+			text-align: center;
+			opacity: 0;
+			transition: opacity 0.35s;
+			inset: 50% 0 0 0;
+		}
 
-      p {
-        font-size: 1.25rem;
-      }
+		&:hover figcaption {
+			opacity: 0.9;
+		}
 
-      a:hover {
-        &:hover {
-          color: var(--color-text-1);
-        }
-      }
+		h3 {
+			color: var(--color-primary-light);
+			font-size: 2rem;
+			font-weight: 700;
+		}
 
-      .bi {
-        font-size: 2.5rem;
-      }
-    }
+		p {
+			font-size: 1.25rem;
+		}
 
-    &:hover {
-      img {
-        transform: scale(1.5) rotate(22deg);
-      }
+		a:hover {
+			color: var(--color-text-1);
+		}
 
-      figcaption {
-        opacity: 0.9;
-      }
-
-      &::before {
-        display: block;
-      }
-    }
-  }
+		.bi {
+			font-size: 2.5rem;
+		}
+	}
 }
 
 .icon-ripple {
-  display: block;
-  position: relative;
-  width: fit-content;
-  transition: border-radius 0.2s;
-  border-radius: 100%;
-  transition: transform 0.2s;
+	display: block;
+	position: relative;
+	width: fit-content;
+	border-radius: 100%;
+	transition: transform 0.2s, border-radius 0.2s;
 
-  &::before {
-    position: absolute;
-    z-index: -10;
-    content: "";
-    inset: -0.25rem;
-    background-color: rgba(35, 46, 51, 0.274);
-    border-radius: 100%;
-    inset: 0;
-    transition: inset 0.2s;
-    inset: 0rem;
-  }
+	&:hover {
+		transform: scale(1.25);
+		border-radius: 1.5rem;
+	}
 
-  &:hover {
-    transform: scale(1.25);
-    border-radius: 1.5rem;
-  }
+	&::before {
+		z-index: -10;
+		position: absolute;
+		border-radius: 100%;
+		background-color: rgba(35, 46, 51, 0.274);
+		content: '';
+		transition: inset 0.2s;
+		inset: 0;
+	}
 
-  &:hover::before {
-    inset: -3rem;
-  }
+	&:hover::before {
+		inset: -3rem;
+	}
 }
