@@ -1,56 +1,77 @@
-.skills {
-  padding-top: 5rem;
+.container--skills {
+	margin-top: 5rem;
 
-  &__container {
-    border-left: solid #ffffff 0.5rem;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.01);
-    padding: 1rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 2rem;
+	p {
+		margin-bottom: 2.5rem;
+	}
+}
 
-    h3 {
-      position: relative;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      z-index: 10;
-    }
-  }
+.skills-wrapper {
+	margin-bottom: 3rem;
+	padding: 1rem;
+	overflow: hidden;
+	border-left: solid #ffffff 0.5rem;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.01);
 
-  &__list {
-    &__item {
-      text-align: center;
+	h3 {
+		z-index: 10;
+		position: relative;
+		margin-top: 0.5rem;
+		margin-bottom: 1.5rem;
+		font-weight: 700;
+		text-align: center;
+	}
 
-      h3 {
-        margin-top: 0.5rem;
-        color: var(--color-text-3);
-      }
+	&__list {
+		padding-block: 0.5rem;
 
-      &__icon {
-        margin-inline: auto;
-        padding: 0.75rem;
-        background-color: rgba(35, 46, 51, 0.274);
+		&__item {
+			text-align: center;
 
-        img {
-          display: block;
-          width: 48px;
-          height: 48px;
-        }
-      }
+			h4 {
+				margin-top: 0.5rem;
+				color: var(--color-text-3);
+			}
 
-      &:hover h3 {
-        color: var(--color-text-1);
-      }
+			&:hover h4 {
+				color: var(--color-text-1);
+			}
 
-      &:hover &__icon {
-        transform: scale(1.5);
-        border-radius: 1.5rem;
-      }
+			&__icon {
+				padding: 0.75rem;
+				background-color: rgba(35, 46, 51, 0.274);
+				margin-inline: auto;
 
-      &:hover &__icon::before {
-        inset: -3rem;
-      }
-    }
-  }
+				img {
+					display: block;
+					width: 48px;
+					height: 48px;
+				}
+			}
+
+			&:hover &__icon {
+				transform: scale(1.5);
+				border-radius: 1.5rem;
+
+				&::before {
+					inset: -3rem;
+				}
+			}
+		}
+	}
+}
+
+.container--skills {
+	:nth-child(3) {
+		border-color: #f7485b;
+	}
+	
+	:nth-child(4) {
+		border-color: #2cf74e;
+	}
+
+	:nth-child(5) {
+		border-color: #2776df;
+	}
 }

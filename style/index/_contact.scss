@@ -1,26 +1,30 @@
+.container--contact {
+	margin-top: 5rem;
+}
+
 .contact-icons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 4rem;
-  flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 800px;
+	margin: 2rem auto 0;
+	padding: 0.5rem;
+	gap: 1rem 4rem;
 
-  &__icon {
-    border-radius: 5rem;
-    max-width: 6rem;
-    width: 6rem;
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
-    color: var(--color-text-3);
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 6rem;
+		border-radius: 5rem;
+		color: var(--color-text-3);
+		font-size: 3rem;
+		transition: background-color 0.2s, color 0.2s, border-radius 0.2s, transform 0.2s;
 
-    &:hover {
-      background-color: var(--color-primary-light);
-      border-radius: 2rem;
-      color: var(--color-bg-5);
-      transform: scale(1.2);
-    }
-  }
+		&:hover {
+			transform: scale(1.2);
+			border-radius: 2rem;
+			background-color: var(--color-primary-light);
+			color: var(--color-bg-5);
+		}
+	}
 }
