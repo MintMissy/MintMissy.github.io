@@ -114,6 +114,9 @@ p {
   @media screen and (min-width: 375px) and (max-width: 575px) {
     .cards-group__card {
       height: 300px; } }
+  @media screen and (min-width: 1200px) {
+    .cards-group__card {
+      height: 325px; } }
   .cards-group__card::before {
     display: none;
     z-index: 100;

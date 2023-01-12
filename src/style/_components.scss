@@ -115,6 +115,10 @@
 			height: 300px;
 		}
 
+		@media screen and (min-width: 1200px) {
+			height: 325px;
+		}
+
 		&::before {
 			display: none;
 			z-index: 100;
