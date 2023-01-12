@@ -1,9 +1,19 @@
 .home-hero {
 	position: relative;
-	min-height: 90vh;
-	padding-top: 15rem;
-	padding-bottom: 8rem;
-	padding-left: 12rem;
+	padding-top: 12rem;
+	padding-bottom: 10rem;
+	text-align: center;
+	
+	@media screen and (min-width: 769px) {
+		min-height: 80vh;
+		padding-top: 18rem;
+		text-align: left;
+		margin-inline: auto;
+	}
+
+	@media screen and (min-width: 1000px) {
+		min-height: 100vh;
+	}
 
 	video {
 		z-index: -1;
@@ -17,7 +27,7 @@
 	}
 
 	p {
-		max-width: 70%;
+		max-width: 50ch;
 		margin-bottom: 1.5rem;
 		color: var(--color-text-2);
 	}
@@ -30,10 +40,18 @@
 		font-weight: 600;
 		letter-spacing: 2px;
 	}
+
+	.logo {
+		max-width: 18rem;
+		width: 100%;
+	}
 }
 
 .scroll-container {
-	position: relative;
+	position: absolute;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
 	overflow: hidden;
 
 	.arrow {

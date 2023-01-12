@@ -45,14 +45,28 @@ p {
   display: flex;
   z-index: 100;
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  justify-content: space-around;
   border-radius: 4px;
   background-color: var(--color-primary-light);
   box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
   list-style: none;
   padding-inline: 0.5rem;
-  gap: 1.5rem; }
+  gap: 0.5rem; }
+  @media screen and (min-width: 450px) {
+    .navbar {
+      top: 1.5rem;
+      margin: 0 auto;
+      gap: 1.5rem;
+      max-width: fit-content; } }
+  @media screen and (min-width: 769px) {
+    .navbar {
+      right: 1.5rem;
+      left: unset;
+      padding: 0.65rem 0.9rem;
+      transform: none; } }
   .navbar__link {
     color: #000000;
     font-weight: 600;
@@ -67,8 +81,7 @@ p {
   position: fixed;
   top: 1.5rem;
   left: 1.5rem;
-  flex-direction: column;
-  padding: 1.5rem 0.9rem;
+  flex-direction: row;
   border-radius: 4px;
   background: var(--color-primary-light);
   color: #000000;
@@ -76,7 +89,12 @@ p {
   gap: 1.5rem; }
   @media screen and (min-width: 769px) {
     .socials {
-      display: flex; } }
+      display: flex;
+      padding: 0.65rem 0.9rem; } }
+  @media screen and (min-width: 1350px) {
+    .socials {
+      flex-direction: column;
+      padding: 1.5rem 0.9rem; } }
   .socials__icon {
     border-radius: 4px;
     font-size: 1.4rem;
@@ -91,8 +109,11 @@ p {
 
 .cards-group__card {
   position: relative;
-  height: 300px;
+  height: 375px;
   overflow: hidden; }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    .cards-group__card {
+      height: 300px; } }
   .cards-group__card::before {
     display: none;
     z-index: 100;
@@ -159,10 +180,18 @@ p {
 
 .home-hero {
   position: relative;
-  min-height: 90vh;
-  padding-top: 15rem;
-  padding-bottom: 8rem;
-  padding-left: 12rem; }
+  padding-top: 12rem;
+  padding-bottom: 10rem;
+  text-align: center; }
+  @media screen and (min-width: 769px) {
+    .home-hero {
+      min-height: 80vh;
+      padding-top: 18rem;
+      text-align: left;
+      margin-inline: auto; } }
+  @media screen and (min-width: 1000px) {
+    .home-hero {
+      min-height: 100vh; } }
   .home-hero video {
     z-index: -1;
     position: absolute;
@@ -173,7 +202,7 @@ p {
     object-fit: cover;
     opacity: 0.1; }
   .home-hero p {
-    max-width: 70%;
+    max-width: 50ch;
     margin-bottom: 1.5rem;
     color: var(--color-text-2); }
   .home-hero button {
@@ -183,9 +212,15 @@ p {
     color: var(--color-bg-5);
     font-weight: 600;
     letter-spacing: 2px; }
+  .home-hero .logo {
+    max-width: 18rem;
+    width: 100%; }
 
 .scroll-container {
-  position: relative;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
   overflow: hidden; }
   .scroll-container .arrow {
     display: block;
