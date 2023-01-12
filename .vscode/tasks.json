@@ -4,7 +4,7 @@
 		{
 			"label": "Compile SASS",
 			"type": "shell",
-			"command": "sass --watch style/style.scss:style/style.css"
+			"command": "sass --watch src/style/style.scss:src/style/style.css"
 		}
 	]
 }
