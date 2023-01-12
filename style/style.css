@@ -58,9 +58,9 @@ p {
   @media screen and (min-width: 450px) {
     .navbar {
       top: 1.5rem;
+      max-width: fit-content;
       margin: 0 auto;
-      gap: 1.5rem;
-      max-width: fit-content; } }
+      gap: 1.5rem; } }
   @media screen and (min-width: 769px) {
     .navbar {
       right: 1.5rem;
@@ -213,14 +213,14 @@ p {
     font-weight: 600;
     letter-spacing: 2px; }
   .home-hero .logo {
-    max-width: 18rem;
-    width: 100%; }
+    width: 100%;
+    max-width: 18rem; }
 
 .scroll-container {
   position: absolute;
+  right: 0;
   bottom: 2rem;
   left: 0;
-  right: 0;
   overflow: hidden; }
   .scroll-container .arrow {
     display: block;

@@ -3,7 +3,7 @@
 	padding-top: 12rem;
 	padding-bottom: 10rem;
 	text-align: center;
-	
+
 	@media screen and (min-width: 769px) {
 		min-height: 80vh;
 		padding-top: 18rem;
@@ -42,16 +42,16 @@
 	}
 
 	.logo {
-		max-width: 18rem;
 		width: 100%;
+		max-width: 18rem;
 	}
 }
 
 .scroll-container {
 	position: absolute;
+	right: 0;
 	bottom: 2rem;
 	left: 0;
-	right: 0;
 	overflow: hidden;
 
 	.arrow {

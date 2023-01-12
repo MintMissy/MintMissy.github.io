@@ -3,10 +3,10 @@
 	"useTabs": true,
 	"overrides": [
 		{
-				"files": ["**/*.css", "**/*.scss"],
-				"options": {
-						"singleQuote": true
-				}
+			"files": ["**/*.css", "**/*.scss"],
+			"options": {
+				"singleQuote": true
+			}
 		}
 	]
 }

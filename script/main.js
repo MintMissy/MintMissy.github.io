@@ -5,7 +5,7 @@ let mousePosition = { x: 0, y: 0 };
 let lastMoveTimeStamp = 0;
 
 addEventListener("mousemove", (event) => {
-  lastMoveTimeStamp = Date.now()
+	lastMoveTimeStamp = Date.now();
 	mousePosition = { x: event.pageX, y: event.pageY };
 });
 
@@ -65,9 +65,9 @@ for (let i = 0; i < 10; i++) {
 animateParticles();
 
 setInterval(() => {
-  if (Date.now() - lastMoveTimeStamp > 250) {
-    trailParticles.forEach((particle) => particle.setDisplayNone())
-  } else {
-    trailParticles.forEach((particle) => particle.setDisplayBlock())
-  }
+	if (Date.now() - lastMoveTimeStamp > 250) {
+		trailParticles.forEach((particle) => particle.setDisplayNone());
+	} else {
+		trailParticles.forEach((particle) => particle.setDisplayBlock());
+	}
 }, 100);
