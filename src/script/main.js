@@ -71,3 +71,54 @@ setInterval(() => {
 		trailParticles.forEach((particle) => particle.setDisplayBlock());
 	}
 }, 100);
+
+// Update active navbar link
+const navbar = document.querySelector("#navbar");
+let currentSection = "";
+
+function updateActiveNav(section) {
+	if (currentSection === section) {
+		return;
+	}
+
+	const link = navbar.querySelector("li .active");
+	if (link !== null) {
+		link.classList.remove("active");
+		currentSection = section;
+	}
+
+	if (section === "") {
+		return;
+	}
+
+	const activeLink = navbar.querySelector(`li > #${section}`);
+	activeLink.classList.add("active");
+}
+
+const aboutSection = document.querySelector("#about");
+const skillsSection = document.querySelector("#skills");
+const projectsSection = document.querySelector("#projects");
+const contactSection = document.querySelector("#contact");
+
+addEventListener("scroll", () => {
+	const scrollY = window.scrollY;
+	const offset = scrollY - 200;
+
+	console.log("----------");
+	console.log(document.body.scrollHeight);
+	console.log(window.scrollY + window.innerHeight);
+
+	console.log(scrollY);
+
+	if (window.scrollY + window.innerHeight > document.body.scrollHeight - 200) {
+		updateActiveNav("contactLink");
+	} else if (scrollY > projectsSection.getBoundingClientRect().top + offset) {
+		updateActiveNav("projectsLink");
+	} else if (scrollY > skillsSection.getBoundingClientRect().top + offset) {
+		updateActiveNav("skillsLink");
+	} else if (scrollY > aboutSection.getBoundingClientRect().top + offset) {
+		updateActiveNav("aboutLink");
+	} else {
+		updateActiveNav("");
+	}
+});
